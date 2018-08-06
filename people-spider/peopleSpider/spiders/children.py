@@ -134,13 +134,13 @@ class ChildrenSpider(scrapy.Spider):
                 item['image_urls'] += list(map(response.urljoin, item_images))
 
         # 根据地址请求高德逆地址编码接口，查找相应坐标
-        lng_lat_url = 'http://restapi.amap.com/v3/geocode/geo?key=ce3bce262f54d0656b06be0201abb882&address='+item["address"]+'&city=' + city
-        res = requests.get(url=lng_lat_url)
-        res_json = res.json()
-        if res_json['status'] == '1':
-            item['businessLocation'] = res_json['geocodes'][0]
-        else:
-            item['businessLocation'] = ''
+        # lng_lat_url = 'http://restapi.amap.com/v3/geocode/geo?key=''&address='+item["address"]+'&city=' + city
+        # res = requests.get(url=lng_lat_url)
+        # res_json = res.json()
+        # if res_json['status'] == '1':
+        #     item['businessLocation'] = res_json['geocodes'][0]
+        # else:
+        #     item['businessLocation'] = ''
 
         return item
 

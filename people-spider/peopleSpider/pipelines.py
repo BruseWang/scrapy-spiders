@@ -55,7 +55,7 @@ class TuniuPipeline(object):  # 设置工序一,生成EXCEL表格
     wb = Workbook()
     ws = wb.active
 
-    ws.append(['pageLink', 'city', 'title', 'titleImg', 'image_urls', 'star', 'avprice', 'address', 'phone', 'nearLocation', 'payType', 'workTime', 'playNotice', 'introduce', 'businessLocation', 'images'])
+    ws.append(['pageLink', 'city', 'title', 'titleImg', 'image_urls', 'star', 'avprice', 'address', 'phone', 'nearLocation', 'payType', 'workTime', 'playNotice', 'introduce', 'images'])
 
     def process_item(self, item, spider):
 
